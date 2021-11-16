@@ -1,0 +1,27 @@
+# General C++ exclusion
+*.o
+*.so
+
+# General Python exclusion
+*.pyc
+__init__.py
+
+# Swap files
+*.swp
+
+# General data file exclusions
+core*
+*.txt
+*.root
+*.log
+temp
+*.tmp
+log*
+*.gz
+*.zip
+*.tgz
+*.eps
+*.png
+*.dat
+*.pdf
+*.db
