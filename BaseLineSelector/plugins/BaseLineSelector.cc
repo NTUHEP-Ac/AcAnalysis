@@ -28,9 +28,7 @@ BaseLineSelector::filter(edm::Event& iEvent, const edm::EventSetup& iSetup)
     iEvent.getByToken( _musrc, _muhandle );
     iEvent.getByToken( _elsrc, _elhandle );
     iEvent.getByToken( _jetsrc, _jethandle );
-
     cout<<_muhandle->size()<<endl;
-
     return true;
 }
 

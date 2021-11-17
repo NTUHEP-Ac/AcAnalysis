@@ -33,7 +33,7 @@ options.register('Debug',
      'Debugging output level' )
 
 options.setDefault('maxEvents', -1 )
-options.setDefault('inputFiles', "file:" + CMSSW_BASE + dir_path + 'test/test.root' )
+options.setDefault('inputFiles', "file:" + CMSSW_BASE + dir_path + '/test/test.root' )
 options.parseArguments()
 
 mysetting = importlib.import_module('AcAnalysis.BaseLineSelector.Precut_{}_cfi'.format( options.year ) )
@@ -44,7 +44,7 @@ print ">> Dataset: {}".format( options.inputFiles )
 #-------------------------------------------------------------------------------
 #   Process Setup
 #-------------------------------------------------------------------------------
-process = cms.Process("Pre-select")
+process = cms.Process("PreSelect")
 process.options = cms.untracked.PSet(wantSummary=cms.untracked.bool(True))
 process.load("FWCore.MessageService.MessageLogger_cfi")
 if options.Debug :
@@ -84,7 +84,7 @@ process.filterpath = cms.Path(
 
 process.edmOut = cms.OutputModule(
         "PoolOutputModule",
-        fileName = cms.untracked.string( "Precut_{}.root".format( options.lepton, options.year ) ),
+        fileName = cms.untracked.string( "Precut_{}.root".format(options.year ) ),
 
         outputCommands=cms.untracked.vstring(
             "keep *",
