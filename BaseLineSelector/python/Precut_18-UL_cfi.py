@@ -9,7 +9,10 @@ commontool = cms.PSet(
         elsrc = cms.InputTag( "slimmedElectrons"),
         
         jetsrc  = cms.InputTag( "slimmedJets"),
-        jettype = cms.string('AK4PFchs')
+        jettype = cms.string('AK4PFchs'),
         # customized cut
-        # e.g. jetPt = cms.double(120),  
+        # e.g. jetPt = cms.double(120), 
+        Ldjet_Ptmin = cms.double(15),
+        lep_nmin = cms.int32(2),
+        lep_Ptmin = cms.double(15)
         )

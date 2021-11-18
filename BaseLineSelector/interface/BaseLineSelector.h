@@ -40,6 +40,9 @@ class BaseLineSelector : public edm::stream::EDFilter<> {
         const edm::EDGetTokenT<std::vector<pat::Muon> > _musrc;
         const edm::EDGetTokenT<std::vector<pat::Electron> > _elsrc;
         const edm::EDGetTokenT<std::vector<pat::Jet> > _jetsrc;
+        const double _Ldjet_Ptmin;
+        const int _lep_nmin;
+        const double _lep_Ptmin;
         edm::Handle<std::vector<pat::Muon> > _muhandle;
         edm::Handle<std::vector<pat::Electron> > _elhandle;
         edm::Handle<std::vector<pat::Jet> > _jethandle;
