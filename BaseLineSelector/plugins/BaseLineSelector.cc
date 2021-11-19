@@ -28,9 +28,6 @@ BaseLineSelector::~BaseLineSelector()
 bool
 BaseLineSelector::filter(edm::Event& iEvent, const edm::EventSetup& iSetup)
 {
-    edm::Handle<std::vector<pat::Muon> > _muhandle;
-    edm::Handle<std::vector<pat::Electron> > _elhandle;
-    edm::Handle<pat::JetCollection > _jethandle;
     iEvent.getByToken( _musrc, _muhandle );
     iEvent.getByToken( _elsrc, _elhandle );
     iEvent.getByToken( _jetsrc, _jethandle );
